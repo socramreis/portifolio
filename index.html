@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>José Marcos Reis · Dados & Integrações</title>
-<meta name="description" content="José Marcos Reis — Desenvolvedor de Dados e Integrações e Full Stack PHP com mais de 12 anos em TI. Integrações com SAP, TOTVS, Linx e outros ERPs, ETL, SQL Server, Power BI, Laravel e Vue.js. Disponível para vagas remotas.">
+<title>José Marcos Reis · Integração e Análise de Dados</title>
+<meta name="description" content="José Marcos Reis — Especialista em Integração e Análise de Dados com PHP, Python e SQL, mais de 12 anos em TI. Integrações com SAP, TOTVS, Linx e outros ERPs, ETL, SQL Server, Power BI, Laravel e Vue.js. Disponível para vagas remotas.">
 <meta name="author" content="José Marcos Reis">
 <meta name="theme-color" content="#0b1211">
 <meta property="og:type" content="website">
@@ -92,13 +92,17 @@ nav ul a.act{color:var(--ink);background:var(--soft)}
 .pill{display:inline-flex;align-items:center;gap:8px;font-size:13px;border:1px solid var(--line);background:var(--card);border-radius:99px;padding:4px 12px;color:var(--muted)}
 .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 var(--accent);animation:pulse 2s infinite}
 @keyframes pulse{70%{box-shadow:0 0 0 8px transparent}100%{box-shadow:0 0 0 0 transparent}}
-.hero h1{font-size:clamp(34px,4.8vw,56px);font-weight:700;letter-spacing:-.025em;line-height:1.05;margin:18px 0 16px}
+.hero h1{font-size:clamp(34px,4.8vw,56px);font-weight:700;letter-spacing:-.025em;line-height:1.05;margin:8px 0 16px}
+.hero .role{display:block;font-family:var(--mono);font-size:13px;letter-spacing:.04em;color:var(--muted);margin-top:22px}
+.hero .role b{color:var(--ink);font-weight:600}
 .hero h1 span{display:block;font-size:.58em;line-height:1.15;letter-spacing:-.015em;margin-top:10px;max-width:22ch}
 .hero h1 span{background:linear-gradient(90deg,var(--accent),var(--accent2),var(--accent));background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 8s linear infinite}
 @keyframes shine{to{background-position:200% center}}
 .lead{font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:54ch}
 .lead b{color:var(--ink);font-weight:600}
 .erps{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:18px;font-size:13px;color:var(--muted)}
+.erps .arrow{color:var(--accent);font-weight:600}
+.erps span.bi{border-color:var(--accent);color:var(--accent);font-weight:600}
 .erps span{font-family:var(--mono);font-size:12px;padding:3px 10px;border-radius:6px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid var(--line);color:var(--ink);background:var(--card);cursor:pointer;font-family:inherit;transition:transform .2s var(--ease),border-color .2s,box-shadow .2s}
@@ -156,10 +160,32 @@ section{padding-block:64px}
   .flow::before{left:21px;right:auto;top:22px;bottom:22px;width:2px;height:auto;background:repeating-linear-gradient(180deg,var(--accent) 0 8px,transparent 8px 16px);background-size:2px 32px;animation-name:flowy}
   .step{grid-template-columns:44px 1fr}
 }
-.outcome{margin-top:18px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;color:var(--muted);font-size:14px}
+.fork{position:relative;margin-top:26px;padding-top:30px}
+.fork::before{content:"";position:absolute;left:50%;top:0;height:28px;border-left:2px dashed var(--accent);opacity:.55}
+.fork-head{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;margin-bottom:6px}
+.fork-head .num{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:var(--accent);color:var(--bg);box-shadow:0 0 0 6px var(--bg)}
+.fork-head .num svg{width:20px;height:20px}
+.fork-head .k{font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:.06em}
+.fork-head h3{font-size:clamp(18px,2.2vw,22px);margin-top:4px}
+.fork-grid{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding-top:30px}
+.fork-grid::before{content:"";position:absolute;top:8px;left:16.66%;right:16.66%;border-top:2px dashed var(--accent);opacity:.55}
+.fork-card{position:relative;padding:18px;display:grid;gap:8px;align-content:start;transition:border-color .3s,transform .3s var(--ease),opacity .7s var(--ease)}
+.fork-card::before{content:"";position:absolute;left:50%;top:-22px;height:21px;border-left:2px dashed var(--accent);opacity:.55}
+.fork-card:hover{border-color:var(--accent)}
+.fork-card .ic{display:grid;place-items:center;width:38px;height:38px;border-radius:10px;background:var(--soft);color:var(--accent)}
+.fork-card .ic svg{width:19px;height:19px}
+.fork-card h3{font-size:18px}
+.fork-card p{color:var(--muted);font-size:14px}
+.fork-card .tags li{font-size:11px}
+@media (max-width:900px){.fork-grid{grid-template-columns:1fr;padding-top:14px}.fork-grid::before,.fork-card::before{display:none}}
+.outcome{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;color:var(--muted);font-size:14px}
 .outcome b{color:var(--ink);font-weight:600}
 .outcome span{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:99px;background:var(--soft);color:var(--ink);font-size:13px}
 .outcome span::before{content:"✓";color:var(--accent);font-weight:700}
+.outcome{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.outcome b{grid-column:1/-1;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.outcome span{display:flex;align-items:center;gap:10px;justify-content:flex-start;text-align:left;padding:12px 16px;border-radius:12px;line-height:1.35}
+@media (max-width:900px){.outcome{grid-template-columns:1fr}.outcome span{justify-content:flex-start;text-align:left}}
 
 /* projects */
 .proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
@@ -180,12 +206,12 @@ section{padding-block:64px}
 .tags li{font-family:var(--mono);font-size:12px;border:1px solid var(--line);padding:2px 9px;border-radius:6px;color:var(--muted)}
 
 /* illustrative screens */
-.screen{background:var(--card2);border-bottom:1px solid var(--line);height:250px;display:grid;grid-template-rows:auto 1fr;min-width:0}
+.screen{background:var(--card2);border-bottom:1px solid var(--line);height:280px;display:grid;grid-template-rows:auto 1fr;min-width:0}
 .chrome{display:flex;align-items:center;gap:5px;padding:8px 12px;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:.04em}
 .chrome i{width:7px;height:7px;border-radius:50%;background:var(--line)}
 .chrome span{margin-left:6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .chrome em{margin-left:auto;font-style:normal;padding:1px 6px;border:1px solid var(--line);border-radius:4px;font-size:9px}
-.stage{position:relative;padding:12px;min-height:0;overflow:hidden;
+.stage{position:relative;padding:14px;min-height:0;overflow:hidden;
   background-image:linear-gradient(color-mix(in srgb,var(--line) 55%,transparent) 1px,transparent 1px),linear-gradient(90deg,color-mix(in srgb,var(--line) 55%,transparent) 1px,transparent 1px);background-size:22px 22px}
 .scr{height:100%;display:grid;gap:8px;min-height:0;min-width:0}
 .panel{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px 10px;min-width:0;min-height:0;box-shadow:0 6px 18px -12px rgba(0,0,0,.5)}
@@ -196,27 +222,33 @@ section{padding-block:64px}
 .proj:not(.on) .anim, .proj:not(.on) .anim *{animation-play-state:paused!important}
 
 /* sentiment */
-.sent{grid-template-columns:1.15fr 1fr}
-.tmap{display:grid;align-content:center;justify-items:center}
-.tiles{display:grid;grid-template-columns:repeat(10,1fr);gap:3px;width:100%;max-width:230px}
-.tiles i{aspect-ratio:1;border-radius:3px;background:var(--accent);animation:flick 2.6s ease-in-out infinite alternate}
-.tiles i.off{visibility:hidden;animation:none}
-.tiles i.neg{background:var(--signal)}
-.tiles i.neu{background:var(--muted)}
-@keyframes flick{from{filter:brightness(.8)}to{filter:brightness(1.35)}}
-.legend{display:flex;gap:10px;margin-top:8px;font-family:var(--mono);font-size:10px;color:var(--muted)}
+.sent{grid-template-columns:1.5fr 1fr;gap:10px}
+.bmap{display:grid;grid-template-rows:auto 1fr auto;gap:6px;min-height:0;padding:10px 12px}
+.bh{display:flex;justify-content:space-between;align-items:center;gap:8px;min-width:0}
+.hichip{display:inline-flex;align-items:center;gap:5px;font-family:var(--mono);font-size:10px;color:var(--muted);white-space:nowrap;padding:2px 7px;border-radius:99px;background:var(--soft)}
+.panel .hichip b{font-family:var(--mono);font-size:10px;line-height:1;color:var(--ink);font-weight:600}
+.br{width:100%;height:100%;min-height:0;display:block}
+.uf{fill:var(--accent);fill-opacity:var(--o);stroke:var(--card);stroke-width:2;stroke-linejoin:round;transition:fill-opacity .5s}
+.uf.neu{fill:var(--muted);fill-opacity:.32}
+.uf.neg{fill:var(--signal)}
+.uf-hl{fill:none;stroke:var(--ink);stroke-width:3.5;stroke-linejoin:round;transition:d .4s}
+.legend{display:flex;justify-content:center;gap:12px;font-family:var(--mono);font-size:10px;color:var(--muted)}
+.legend span{white-space:nowrap}
 .legend span::before{content:"";display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:4px;background:var(--c);vertical-align:-1px}
-.sent-r{display:grid;gap:8px;grid-template-rows:auto 1fr;min-height:0}
-.donut{display:flex;align-items:center;gap:10px}
-.donut svg{width:54px;height:54px;flex-shrink:0;transform:rotate(-90deg)}
-.donut circle{transition:stroke-dasharray 1.2s var(--ease)}
-.topics{list-style:none;margin:4px 0 0;padding:0;display:grid;gap:5px}
-.topics li{display:grid;grid-template-columns:1fr 34px auto;align-items:center;gap:6px;font-family:var(--mono);font-size:10.5px;white-space:nowrap}
+.sent-r{display:grid;gap:10px;grid-template-rows:auto 1fr;min-height:0}
+.donut{display:flex;align-items:center;gap:12px;padding:10px 12px}
+.donut svg{width:56px;height:56px;flex-shrink:0;transform:rotate(-90deg)}
+.donut b{font-size:22px}
+.donut small{margin-top:2px}
+.tpanel{padding:10px 12px;display:grid;grid-template-rows:auto 1fr;min-height:0}
+.topics{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:8px;align-content:start}
+.topics li{display:grid;grid-template-columns:1fr 40px 42px;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;white-space:nowrap}
 .topics li span{overflow:hidden;text-overflow:ellipsis}
 .topics li i{height:4px;border-radius:2px;background:var(--line);position:relative;overflow:hidden}
 .topics li i::after{content:"";position:absolute;inset:0;width:var(--w);background:var(--accent);border-radius:2px;animation:fillw 1.2s var(--ease) both}
+.topics li em{font-style:normal;text-align:right}
 @keyframes fillw{from{width:0}}
-@media (max-width:480px){.topics li{grid-template-columns:1fr auto}.topics li i{display:none}}
+@media (max-width:520px){.sent{grid-template-columns:1.25fr 1fr}.hichip{display:none}.legend{gap:6px;font-size:9px}.legend span::before{width:6px;height:6px;margin-right:3px}.donut{flex-direction:column;justify-content:center;text-align:center;gap:6px}.donut svg{width:46px;height:46px}.donut b{font-size:18px}.sent-r{grid-template-rows:1fr auto}.topics li{grid-template-columns:1fr auto;font-size:10px}.topics li i{display:none}}
 
 /* voice */
 .voice{grid-template-rows:auto 1fr auto}
@@ -278,7 +310,7 @@ section{padding-block:64px}
 .modal::backdrop{background:rgba(5,10,9,.6);backdrop-filter:blur(4px)}
 .modal[open]{animation:pop .3s var(--ease)}
 @keyframes pop{from{opacity:0;transform:translateY(12px) scale(.98)}}
-.modal .screen{height:270px;border-radius:18px 18px 0 0}
+.modal .screen{height:320px;border-radius:18px 18px 0 0}
 .mbox{padding:clamp(20px,4vw,32px);display:grid;gap:16px}
 .mhead{display:flex;justify-content:space-between;gap:12px;align-items:start}
 .mhead h3{font-size:clamp(24px,4vw,30px);margin-top:8px}
@@ -374,8 +406,9 @@ footer a{color:var(--muted)}
     <div class="in">
       <div>
         <span class="pill"><span class="dot"></span>Disponível · 100% remoto · CLT ou PJ</span>
-        <h1>José Marcos Reis<span>Dados, Desenvolvimento de Integrações &amp; Suporte</span></h1>
-        <p class="lead"><b>Desenvolvedor Full Stack com foco em PHP e Python, especializado em Análise de Dados, Integrações de Sistemas, Desenvolvimento de Soluções e Suporte Técnico.</b> com mais de 12 anos em TI. Conecto ERPs a plataformas de dados e BI de grandes redes, saneio milhões de registros e entrego aplicações que rodam em produção.</p>
+        <span class="role"><b>PHP</b> · <b>Python</b> · <b>SQL</b> · <b>Power BI</b> — 12+ anos em TI</span>
+        <h1>José Marcos Reis<span>Especialista em Integração e Análise de Dados</span></h1>
+        <p class="lead"><b>Conecto ERPs a plataformas de dados e BI e transformo milhões de registros em informação confiável.</b> Desenvolvo integrações por API, webservice e arquivos, com staging, validação e cargas em massa. Do dado bruto ao dashboard, com aplicações PHP e automações Python que rodam em produção.</p>
         <div class="erps"><span v-for="e in erps" :key="e">{{ e }}</span>e outros ERPs</div>
         <div class="cta">
           <a class="btn pri" href="#integracoes">Como eu integro <span aria-hidden="true">→</span></a>
@@ -398,7 +431,7 @@ footer a{color:var(--muted)}
     </div>
 
     <section id="integracoes"><div class="in">
-      <div class="sh" v-reveal><div><span class="label">Integrações</span><h2>Do ERP ao dashboard</h2></div><p>O caminho que os dados percorrem, da origem até chegarem prontos para a decisão.</p></div>
+      <div class="sh" v-reveal><div><span class="label">Integrações · ETL</span><h2>Do ERP ao dashboard</h2></div><p>ETL completo: extração na origem, staging, transformação e carga, com os dados prontos no Power BI, nas aplicações web e em relatórios.</p></div>
       <ol class="flow">
         <li class="step" v-for="(s,i) in flow" :key="s.title">
           <span class="num" aria-hidden="true" v-html="s.icon"></span>
@@ -410,7 +443,17 @@ footer a{color:var(--muted)}
           </div>
         </li>
       </ol>
-      <div class="outcome" v-reveal><b>Resultado:</b><span v-for="o in outcomes" :key="o">{{ o }}</span></div>
+      <div class="fork">
+        <div class="fork-head" v-reveal><span class="num" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M12 16V12M12 12L6 8M12 12l6-4"/></svg></span><div><span class="k">ETAPA 06 · CONSUMO</span><h3>Os mesmos dados, disponíveis onde a decisão acontece</h3></div></div>
+        <div class="fork-grid">
+          <article class="card fork-card" v-for="(c,i) in consumers" :key="c.title" v-reveal="i*90">
+            <span class="ic" aria-hidden="true" v-html="c.icon"></span>
+            <h3>{{ c.title }}</h3><p>{{ c.text }}</p>
+            <ul class="tags"><li v-for="t in c.tags" :key="t">{{ t }}</li></ul>
+          </article>
+        </div>
+      </div>
+      <div class="outcome" v-reveal><b>O que isso entrega:</b><span v-for="o in outcomes" :key="o">{{ o }}</span></div>
     </div></section>
 
     <section id="projetos"><div class="in">
@@ -430,7 +473,7 @@ footer a{color:var(--muted)}
     </div></section>
 
     <section id="experiencia"><div class="in">
-      <div class="sh" v-reveal><div><span class="label">Experiência</span><h2>Trajetória</h2></div><p>De suporte técnico a especialista em dados e integrações.</p></div>
+      <div class="sh" v-reveal><div><span class="label">Experiência</span><h2>Trajetória</h2></div><p>Do desenvolvimento web PHP à especialização em dados e integrações.</p></div>
       <time-line :jobs="jobs"></time-line>
       <div class="jobs">
         <article class="card job" v-for="(j,i) in jobs" :key="j.role" v-reveal="i*100" :style="{'--c':j.color}">
@@ -526,10 +569,13 @@ footer a{color:var(--muted)}
 
 <script type="text/x-template" id="t-sent">
   <div class="scr sent">
-    <div class="panel tmap">
-      <span class="ph" style="justify-self:start">Sentimento por região</span>
-      <div class="tiles" style="margin-top:6px"><i v-for="(c,k) in tiles" :key="k" :class="c.cls" :style="c.st"></i></div>
-      <div class="legend"><span style="--c:var(--accent)">positivo</span><span style="--c:var(--muted)">neutro</span><span style="--c:var(--signal)">negativo</span></div>
+    <div class="panel bmap">
+      <div class="bh"><span class="ph">Sentimento por estado</span><span class="hichip"><b>{{ hi.uf }}</b>{{ hi.p }}% positivo</span></div>
+      <svg class="br" :viewBox="vb" preserveAspectRatio="xMidYMid meet">
+        <path v-for="s in states" :key="s.uf" :d="s.d" class="uf" :class="s.cls" :style="{'--o':s.o}"/>
+        <path class="uf-hl" :d="hi.d"/>
+      </svg>
+      <div class="legend"><span style="--c:var(--accent)">positivo</span><span style="--c:color-mix(in srgb,var(--muted) 40%,transparent)">neutro</span><span style="--c:var(--signal)">negativo</span></div>
     </div>
     <div class="sent-r">
       <div class="panel donut">
@@ -537,9 +583,9 @@ footer a{color:var(--muted)}
           <circle v-for="s in segs" :key="s.c" cx="21" cy="21" r="15.9155" fill="none" :stroke="s.c" stroke-width="6" :stroke-dasharray="s.v+' '+(100-s.v)" :stroke-dashoffset="s.o"/></svg>
         <div><b>62%</b><small>positivo hoje</small></div>
       </div>
-      <div class="panel">
-        <small>Em alta</small>
-        <ul class="topics"><li v-for="t in topics" :key="t.n"><span>{{ t.n }}</span><i :style="{'--w':t.w+'%'}"></i><em :class="t.up?'ok':'w'" style="font-style:normal">{{ t.up?'▲':'▼' }}{{ t.v }}</em></li></ul>
+      <div class="panel tpanel">
+        <small>Assuntos em alta</small>
+        <ul class="topics"><li v-for="t in topics" :key="t.n"><span>{{ t.n }}</span><i :style="{'--w':t.w+'%'}"></i><em :class="t.up?'ok':'w'">{{ t.up?'▲':'▼' }}{{ t.v }}</em></li></ul>
       </div>
     </div>
   </div>
@@ -658,22 +704,29 @@ const DATA={
   contact:{email:'jmreis.ti@gmail.com',phone:'(71) 99701-8767',whatsapp:'https://wa.me/5571997018767',linkedin:'https://www.linkedin.com/in/jos%C3%A9-marcos-reis-8709a410a'},
   erps:['SAP','TOTVS','Linx'],
   kpis:[
-    {n:12,s:'+',label:'anos em TI, do suporte ao desenvolvimento',path:'M0 38 L15 30 L30 32 L45 22 L60 20 L75 12 L100 4',color:'var(--accent)'},
+    {n:12,s:'+',label:'anos em TI construindo sistemas e integrações',path:'M0 38 L15 30 L30 32 L45 22 L60 20 L75 12 L100 4',color:'var(--accent)'},
     {v:'Milhões',label:'de registros por carga para grandes redes de varejo',path:'M0 36 L20 34 L35 20 L50 24 L70 8 L100 10',color:'var(--signal)'},
     {v:'SAP · TOTVS · Linx',sm:true,label:'e outros ERPs integrados via API, webservice e arquivos',path:'M0 30 L20 26 L40 28 L60 14 L80 16 L100 6',color:'var(--accent2)'},
     {n:30,s:' anos',label:'de dados de um cliente saneados e importados',path:'M0 34 L25 28 L50 18 L75 12 L100 8',color:'var(--accent)'}],
   flow:[
     {title:'Origem',text:'ERPs e sistemas das redes: vendas, estoque, produtos, lojas e pedidos.',tags:['SAP','TOTVS','Linx','outros ERPs'],
      icon:ico('<ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/>')},
-    {title:'Transporte',text:'Coleta agendada por API, webservice ou troca de arquivos, com autenticação e reprocessamento.',tags:['REST · OAuth2','SOAP','SFTP','JSON/XML/CSV'],
+    {title:'Extração',text:'Coleta agendada por API, webservice ou troca de arquivos, com autenticação e reprocessamento.',tags:['REST · OAuth2','SOAP','SFTP','JSON/XML/CSV'],
      icon:ico('<path d="M4 8h13l-3-3M20 16H7l3 3"/>')},
-    {title:'Staging',text:'Área intermediária particionada, com tipagem e chaves normalizadas antes de tocar a base final.',tags:['SQL Server','Partições','Jobs'],
+    {title:'Staging',text:'Área intermediária particionada, com tipagem e chaves normalizadas antes de tocar a base final.',tags:['Banco relacional','Partições','Jobs'],
      icon:ico('<rect x="3" y="4" width="18" height="6" rx="1.5"/><rect x="3" y="14" width="18" height="6" rx="1.5"/><path d="M7 7h.01M7 17h.01"/>')},
-    {title:'Validação',text:'Duplicidades, integridade e regras de negócio. O que não passa vai para quarentena com laudo.',tags:['Python','T-SQL','Quarentena'],
-     icon:ico('<path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/>')},
-    {title:'Entrega',text:'Cargas em massa para a base analítica, que alimenta indicadores e dashboards.',tags:['BulkMerge','Power BI','KPIs'],
-     icon:ico('<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>')}],
-  outcomes:['estoque loja a loja atualizado'],
+    {title:'Transformação',text:'Limpeza, padronização e regras de negócio. Duplicidades e inconsistências vão para quarentena com laudo.',tags:['T-SQL','Python','Procedures','Quarentena'],
+     icon:ico('<path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/>')},
+    {title:'Carga analítica',text:'Cargas em massa na base analítica, com indicadores prontos para consumo.',tags:['BulkMerge','SqlBulkCopy','SQL Server'],
+     icon:ico('<ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v14c0 1.7 3.1 3 7 3s7-1.3 7-3V5"/><path d="M12 10v7M9 14l3 3 3-3"/>')}],
+  consumers:[
+    {title:'Power BI',text:'Base conectada ao Power BI, com dashboards e KPIs atualizados a cada carga.',tags:['Power BI','KPIs','API ERP → BI'],
+     icon:ico('<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>')},
+    {title:'Aplicações web',text:'Dashboards e relatórios dentro dos próprios sistemas, com gráficos interativos em Chart.js e filtros dinâmicos para cada usuário analisar os dados do seu jeito.',tags:['Chart.js','Laravel','Vue.js','APIs REST'],
+     icon:ico('<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 16v-3M11 16v-5M15 16v-2"/>')},
+    {title:'Relatórios automatizados',text:'Relatórios em Excel gerados com Python e automações que entregam os números para as áreas de negócio.',tags:['Python','Excel','n8n','Power Automate'],
+     icon:ico('<path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 12h7M9 16h7M12 12v4"/>')}],
+  outcomes:['Dados validados e atualizados a cada carga','Uma só fonte da verdade para BI, sistemas e relatórios','Decisões com números confiáveis'],
   projects:[
     {id:'sentimentals',name:'Sentimentals Hub',status:'Em desenvolvimento',screen:'sentiment',url:'sentimentals · painel',
      desc:'Plataforma de coleta, saneamento e análise de dados em massa de noticiários e redes sociais. Mostra os assuntos mais comentados e o sentimento da população por estado, cidade e bairro.',
@@ -688,30 +741,32 @@ const DATA={
      highlights:['Monitoramento de instâncias e jobs do SQL Server','Validação dos dados recebidos pelas integrações','Sinalização de divergências antes que cheguem aos indicadores'],
      tags:['SQL Server','T-SQL','Monitoramento','Qualidade de dados']},
     {id:'erp',name:'ERP com CRM para imobiliárias',status:'Em produção',live:true,screen:'erp',url:'erp-imob · dashboard',
-     desc:'Concepção, desenvolvimento, implantação e suporte de um ERP com CRM completo para imobiliárias.',
-     highlights:['Cadastro de imóveis, clientes e contratos','Financeiro e cobrança automatizada','Funil de vendas e dashboards','Automações de e-mail e WhatsApp','Da concepção ao suporte em produção'],
+     desc:'Concepção, desenvolvimento e implantação de um ERP com CRM completo para imobiliárias.',
+     highlights:['Cadastro de imóveis, clientes e contratos','Financeiro e cobrança automatizada','Funil de vendas e dashboards','Automações de e-mail e WhatsApp','Da concepção à produção'],
      tags:['PHP','Laravel','Vue.js','MySQL']}],
   cases:[
-    {k:'Integração',title:'SAP, TOTVS, Linx e outros ERPs',text:'Integrações por API, webservice e troca de arquivos com os ERPs de grandes redes de varejo, com staging, validação e cargas de milhões de registros.'},
+    {k:'Integração',title:'SAP, TOTVS, Linx e outros ERPs',text:'Integrações por API, webservice e troca de arquivos com os ERPs de grandes redes de varejo, com staging, validação e cargas de milhões de registros até os dashboards no Power BI.'},
     {k:'Varejo',title:'Estoque loja a loja, alocação e OTB',text:'Dados diários de vendas e estoque por loja e SKU alimentando alocação, distribuição e planejamento de compras.'},
-    {k:'Sustentação',title:'Diagnóstico e reprocessamento',text:'Investigação de falhas de integração em logs, jobs e procedures, correção na origem, reprocessamento e laudo de causa raiz.'},
+    {k:'Confiabilidade',title:'Diagnóstico e reprocessamento',text:'Investigação de falhas de integração em logs, jobs e procedures, correção na origem, reprocessamento e laudo de causa raiz.'},
     {k:'Migração',title:'30 anos de dados consolidados',text:'Saneamento e importação de dados vindos de planilhas e fontes diferentes para o sistema do cliente.'},
     {k:'BI',title:'ERP conectado ao Power BI',text:'Dashboards em Power BI e em aplicações web, com integração via API entre ERP e Power BI.'},
     {k:'Financeiro',title:'CNAB, boletos e NF-e',text:'Remessa e retorno, API bancária, cobrança e NF-e, com testes e validação das regras de negócio.'}],
   jobs:[
-    {gantt:'Dados & Integrações',org:'Plataforma de planejamento, alocação e BI para grandes redes de varejo',role:'Desenvolvedor de Dados e Integrações',period:'12/2023 – atual',start:[2023,12],end:null,color:'var(--accent2)',
+    {gantt:'Unous · 2024 – atual',org:'Plataforma de planejamento, alocação e BI para grandes redes de varejo',role:'Desenvolvedor de Dados e Integrações',period:'12/2023 – atual',start:[2023,12],end:null,color:'var(--accent2)',
      bullets:['Integrações com SAP, TOTVS, Linx e outros ERPs via API REST (OAuth2), webservices e arquivos (SFTP).','Cargas de milhões de registros com staging particionado, SqlBulkCopy e BulkMerge.','Vendas e estoque loja a loja alimentando alocação, distribuição e planejamento de compras (OTB).','Jobs e serviços em C#/.NET; validação com Python e SQL; automação com n8n, Power Automate e PowerShell.','Diagnóstico de falhas, reprocessamento e laudos de causa raiz; implantação e atualização de ambientes por cliente (Azure, IIS).','Dashboards e indicadores em Power BI.']},
-    {gantt:'JCompany · 11/2015 – 10/2026',org:'JCompany Soluções em Sistemas · ERP/CRM para loteamentos, imóveis e veículos',role:'Analista de Suporte e Desenvolvedor Full Stack PHP',period:'11/2015 – 10/2026',start:[2015,11],end:[2026,10],color:'var(--accent)',
-     bullets:['Comecei no suporte e me tornei especialista no sistema Gerente de Loteamentos.','Aplicações web e APIs REST com PHP, Laravel e Vue.js.','Integrações financeiras e fiscais, CRM e WhatsApp.','Banco de dados (Firebird, SQL Server, MySQL), migração e tuning.','Implantação, treinamento e suporte a clientes.']}],
-  stack:{'Integração':['SAP','TOTVS','Linx','ETL','APIs REST · OAuth2','Webservices','JSON/XML','SFTP','CNAB','Postman','SqlBulkCopy'],
+    {gantt:'JCompany · 11/2015 – 10/2026',org:'JCompany Soluções em Sistemas · ERP/CRM para loteamentos, imóveis e veículos',role:'Desenvolvedor Full Stack PHP',period:'11/2015 – 10/2026',start:[2015,11],end:[2026,10],color:'var(--accent)',
+     bullets:['Especialista no sistema Gerente de Loteamentos.','Aplicações web e APIs REST com PHP, Laravel e Vue.js.','Integrações financeiras e fiscais, CRM e WhatsApp.','Banco de dados (Firebird, SQL Server, MySQL), migração e tuning.','Implantação e treinamento de clientes.']}],
+  stack:{'Integração':['SAP','TOTVS','Linx','Power BI','ETL','APIs REST · OAuth2','Webservices','JSON/XML','SFTP','CNAB','Postman','SqlBulkCopy'],
     'Dados & BI':['Python','SQL','Power BI','KPIs','Saneamento de dados','PLN','Análise de sentimento','Machine Learning'],
     'Banco de dados':['SQL Server','T-SQL','Oracle','MySQL','PostgreSQL','Firebird','Multi-tenant'],
-    'Desenvolvimento':['PHP','Laravel','Vue.js','JavaScript', 'Tailwind','Bootstrap','Git/GitHub','Docker'],
+    'Desenvolvimento':['PHP','Laravel','Vue.js','Chart.js','JavaScript', 'Tailwind','Bootstrap','Git/GitHub','Docker'],
     'Automação & Cloud':['n8n','Power Automate','PowerShell','SQL Agent','Azure','AWS','IIS','Linux'],
     'Domínio':['Varejo', 'Imobiliário','Financeiro e fiscal' ,'Api Cobrança (Boletos)'],
     'IA':['IA generativa','LLMs','Engenharia de prompt','MCP','Claude','Gemini API']}
 };
 
+/* Mapa: @svg-maps/brazil (Victor Cazanave, CC BY 4.0), simplificado */
+const BR_MAP={"vb":"0 0 613 639","s":[{"uf":"AC","n":"Acre","d":"M31 238 29 236 27 234 27 231 20 229 13 229 16 226 17 223 16 221 13 218 11 216 10 214 8 212 7 208 6 207 4 206 5 204 3 202 0 200 1 198 4 196 4 193 21 200 45 206 57 209 84 223 112 235 115 237 113 238 111 239 108 242 107 243 104 244 103 245 100 246 99 248 98 249 96 248 93 249 90 253 86 255 83 256 82 254 77 253 72 253 67 253 64 252 60 254 58 255 55 253 53 254 53 236 54 232 54 230 51 232 49 233 47 235 45 236 43 238Z","p":48},{"uf":"AL","n":"Alagoas","d":"M562 231 561 229 559 227 561 225 563 225 565 221 569 221 572 223 574 225 576 227 580 226 583 227 587 225 589 224 592 222 593 220 598 221 600 220 604 220 606 221 604 226 599 231 596 235 593 239 589 242 588 244 587 246 583 242 581 241 579 240 578 238 572 234 569 234Z","p":58},{"uf":"AP","n":"Amapá","d":"M345 100 342 100 339 100 338 97 336 96 335 92 334 91 334 88 331 85 328 82 327 78 326 76 326 71 324 70 322 68 321 65 321 63 318 60 315 61 313 59 311 58 310 56 308 55 303 54 301 55 300 53 301 48 301 45 303 46 305 48 307 49 311 49 314 48 316 46 320 47 323 46 325 47 327 48 329 48 331 46 333 45 335 43 338 35 339 32 344 26 345 24 347 22 349 19 351 18 352 21 351 16 354 17 356 19 357 22 358 30 359 34 362 40 364 49 368 54 372 54 375 55 377 58 377 62 374 63 376 63 371 68 370 70 368 72 366 76 363 79 360 80 358 83 356 84 354 86 353 88 352 90 348 94 348 96 346 100ZM369 53 367 51 369 49 370 52 369 53ZM371 71 372 69 374 69 373 70ZM375 68 376 66 375 68Z","p":52},{"uf":"AM","n":"Amazonas","d":"M166 48 168 49 170 48 171 51 174 51 176 52 176 56 178 61 180 66 181 69 179 71 180 74 179 77 179 83 180 85 182 87 183 91 182 93 180 94 185 99 187 100 189 102 190 104 194 104 194 102 194 100 194 96 195 93 197 91 199 91 201 90 204 91 206 93 207 95 210 95 212 94 214 93 213 91 214 87 216 83 218 79 236 79 237 83 237 87 239 89 238 92 240 94 243 95 244 98 249 102 253 105 255 107 257 107 259 109 262 109 264 110 266 112 268 114 270 116 271 117 274 116 275 119 246 183 243 185 243 187 244 190 245 191 247 192 247 196 247 198 247 201 245 202 244 204 245 206 244 212 243 218 194 219 192 217 190 218 189 220 186 219 185 216 182 212 179 211 178 210 177 208 174 207 164 207 162 209 161 211 158 212 157 213 158 215 156 217 154 218 155 222 151 221 149 222 146 223 142 223 142 226 140 229 138 226 135 227 134 228 131 229 129 231 127 229 123 229 119 229 117 232 115 233 112 235 84 223 57 209 45 206 21 200 4 193 4 189 5 188 10 184 13 184 14 182 12 177 14 173 15 172 17 170 17 167 17 165 18 162 22 160 24 159 26 156 28 156 30 155 33 152 35 152 41 151 45 150 48 150 49 149 51 146 54 147 56 146 58 147 60 149 63 149 65 143 71 106 72 103 71 98 69 94 69 90 67 89 64 87 62 85 62 73 66 73 68 72 71 71 74 72 76 72 76 69 75 67 73 65 69 65 65 66 65 56 67 55 70 54 73 55 92 55 90 53 91 51 93 53 94 55 97 54 99 52 100 50 103 49 105 52 107 54 108 57 108 62 112 63 120 70 123 71 126 70 127 68 129 67 132 67 133 69 132 71 134 71 135 69 136 68 138 67 139 65 141 64 144 62 147 62 148 60 150 59 152 59 155 58 156 54 156 52 159 51 163 49 166 49Z","p":61},{"uf":"BA","n":"Bahia","d":"M528 366 528 363 523 359 523 356 522 352 523 348 526 348 527 346 527 343 532 339 533 336 532 334 528 331 523 330 521 329 518 328 515 329 511 329 510 326 503 319 499 320 497 319 493 318 491 316 486 313 482 312 478 313 477 314 471 313 470 311 472 307 469 306 465 305 460 307 455 310 451 313 448 315 447 316 444 316 442 319 439 319 438 321 437 318 437 315 438 313 438 310 439 308 435 304 434 301 433 297 434 292 436 291 435 289 435 286 436 285 434 282 435 279 433 277 432 275 432 272 434 270 436 268 434 267 433 265 435 265 434 262 431 262 429 260 430 257 431 253 433 253 432 250 436 247 440 245 441 243 445 245 446 248 448 250 452 252 456 252 457 250 459 249 462 247 465 248 469 245 472 240 473 238 474 236 471 230 474 228 478 228 481 229 483 229 485 230 489 231 492 230 495 227 497 227 499 226 502 226 504 225 504 222 507 222 509 219 512 218 517 220 517 223 518 225 520 226 519 229 522 230 526 228 527 224 529 224 532 223 533 221 535 219 536 217 540 215 542 216 544 218 547 219 550 219 551 220 552 222 553 220 554 222 557 224 558 228 560 229 562 230 562 234 563 237 565 238 566 243 565 245 566 248 562 250 559 249 558 251 559 254 561 256 562 257 562 259 565 261 567 263 570 262 567 271 563 277 562 279 557 285 555 286 555 283 552 281 551 279 550 282 549 283 549 280 549 283 550 285 549 288 547 290 546 291 545 294 547 296 546 299 547 303 545 304 547 303 547 300 548 302 547 305 546 310 546 314 546 317 547 322 548 328 549 332 546 338 545 345 544 349 543 353 544 359 544 361 542 364 539 365 537 369 536 371 528 366ZM550 288 552 285 550 288ZM548 294 546 293 548 292 548 294Z","p":71},{"uf":"CE","n":"Ceará","d":"M574 157 569 159 567 161 563 167 562 169 561 172 560 174 558 175 557 177 554 177 553 180 554 181 553 183 552 186 552 189 551 191 552 192 553 194 552 199 550 201 547 204 545 203 543 202 541 200 539 199 537 197 533 196 530 197 528 197 523 197 522 195 523 191 525 189 524 187 521 186 519 183 518 178 517 175 516 167 517 163 516 160 515 158 515 153 516 151 514 149 511 141 509 136 509 134 510 132 511 130 512 127 519 127 522 126 524 125 531 126 533 127 535 129 539 131 545 135 549 137 552 139 554 140 557 143 561 147 565 150 567 152 569 154 573 155Z","p":66},{"uf":"DF","n":"Distrito Federal","d":"M417 334 402 334 402 331 403 329 403 325 415 325 417 327 416 331 416 333Z","p":39},{"uf":"ES","n":"Espírito Santo","d":"M502 412 502 409 502 405 504 402 509 402 511 399 513 395 513 393 516 390 517 387 516 385 515 382 513 380 512 379 514 379 517 379 515 377 515 373 513 372 514 369 516 368 519 368 517 365 521 365 523 364 527 365 536 371 535 375 535 377 535 381 536 387 535 390 534 393 531 394 529 398 528 402 526 403 527 404 525 409 521 413 518 414 518 417 516 419 511 419 507 418 504 417 504 412Z","p":57},{"uf":"GO","n":"Goiás","d":"M417 334 416 331 417 327 415 325 403 325 403 329 402 331 402 334 417 334 417 337 415 340 415 343 418 344 419 349 417 352 414 355 413 357 415 358 417 359 417 362 417 367 414 369 412 370 407 374 402 371 399 372 394 372 392 371 388 374 385 376 383 375 378 376 375 376 372 377 370 377 368 379 367 382 366 384 363 385 362 387 362 390 358 387 354 387 353 385 349 384 346 383 342 381 340 379 336 378 334 378 330 377 331 375 332 373 329 372 327 371 327 368 326 364 326 361 325 358 325 354 328 350 328 348 331 346 333 344 334 342 335 339 337 337 339 334 340 332 343 331 345 331 348 326 349 321 351 318 353 317 355 318 358 316 359 313 360 310 360 305 362 302 361 297 364 293 366 290 366 286 367 285 368 283 369 279 370 277 370 281 369 283 372 283 374 284 378 285 381 286 385 288 387 282 389 279 391 280 392 282 393 285 394 288 396 288 399 286 404 286 403 288 407 290 410 290 411 287 413 290 415 289 418 287 422 286 427 285 428 284 434 282 436 285 435 286 434 289 436 290 434 292 433 296 434 301 435 304 439 307 438 309 438 311 437 315 433 316 432 314 429 313 428 314 429 318 425 318 423 321 423 323 423 326 424 331 421 333 418 334Z","p":54},{"uf":"MA","n":"Maranhão","d":"M459 129 457 132 459 130 461 129 463 121 465 120 467 120 468 121 466 124 463 125 466 125 470 122 473 121 477 121 477 119 480 119 484 120 487 122 490 123 492 124 494 125 496 126 500 126 502 125 502 127 500 132 496 136 493 136 489 139 488 143 487 145 486 147 484 148 486 151 486 153 485 156 486 159 487 162 487 164 483 169 482 172 483 176 485 178 486 179 486 183 485 186 484 187 482 188 478 188 474 186 471 187 468 187 466 189 463 193 461 194 458 196 456 197 454 198 450 199 448 200 445 202 444 205 444 208 443 210 442 213 441 215 440 218 438 219 438 221 438 223 439 226 441 229 440 231 440 238 438 240 438 243 436 241 434 241 432 241 431 239 430 236 427 234 429 231 425 228 424 226 423 223 420 223 423 219 424 215 425 213 430 213 430 208 428 205 424 206 422 207 419 204 415 199 414 198 414 196 410 194 412 193 414 191 414 188 414 186 416 180 415 177 415 173 414 168 410 166 408 164 406 163 404 164 401 162 398 163 395 165 409 153 411 154 414 151 416 148 417 145 420 143 421 139 423 135 425 133 426 131 427 129 428 126 427 125 431 121 431 117 433 116 434 112 433 110 434 108 435 104 435 101 437 100 439 100 441 102 442 103 443 102 446 102 445 105 447 104 447 109 449 108 450 105 454 105 455 104 454 107 456 107 458 110 460 111 461 113 459 117 461 115 463 118 462 120 459 122 458 125 458 129ZM459 130 460 127 460 124 461 127 460 128ZM453 104 454 102 453 104ZM457 108 457 106 457 108ZM442 103 443 100 443 103Z","p":63},{"uf":"MT","n":"Mato Grosso","d":"M207 296 209 295 213 292 213 290 215 286 217 284 219 281 221 279 221 277 221 274 219 268 217 264 219 262 220 260 219 256 217 255 213 255 212 254 195 254 196 245 194 242 194 239 195 236 196 232 195 230 194 228 195 222 195 220 242 218 244 212 245 208 244 205 245 202 247 201 247 198 248 196 252 201 253 207 255 209 255 213 256 215 256 218 258 219 261 222 264 223 265 226 268 226 269 228 274 230 308 232 371 236 370 238 369 243 366 249 365 252 365 255 363 261 365 263 364 265 365 268 364 271 365 273 365 276 365 279 366 282 367 284 366 286 366 289 364 293 363 296 362 302 360 305 359 308 359 313 358 316 356 317 353 317 351 318 349 320 348 325 346 330 343 331 340 332 339 334 337 335 336 338 334 340 333 344 331 346 329 347 328 350 325 354 325 358 326 361 326 364 327 366 325 366 321 366 316 366 314 365 314 361 316 360 318 354 311 360 307 361 306 359 304 358 302 358 300 359 294 361 292 359 289 358 288 356 284 355 282 354 279 353 277 353 276 354 274 355 270 355 268 356 266 360 264 362 258 364 256 363 254 362 254 359 252 357 249 357 246 355 244 354 243 350 243 344 244 343 245 340 244 338 216 338 215 325 210 319 215 319 214 311 212 306 212 303 213 301 211 298 208 297Z","p":45},{"uf":"MS","n":"Mato Grosso do Sul","d":"M359 400 359 403 357 404 354 405 352 408 350 409 350 413 347 417 346 420 345 423 343 425 341 428 339 431 338 434 336 436 328 440 326 443 320 446 318 449 317 454 314 456 311 464 309 467 306 464 303 462 299 464 296 466 294 466 291 466 290 461 289 459 289 457 288 454 288 451 287 449 287 446 287 444 286 442 285 439 284 437 280 437 276 435 274 433 271 436 269 436 266 436 263 435 260 436 256 435 254 434 250 434 251 426 251 424 252 421 253 415 252 413 251 410 250 407 249 405 248 403 252 399 248 395 254 383 254 381 257 370 254 363 258 364 264 362 266 360 268 357 270 355 272 355 276 354 277 353 279 353 282 354 284 355 287 356 289 358 292 359 294 361 299 360 300 359 304 358 306 359 307 361 310 360 316 354 316 360 314 361 313 364 316 366 320 367 324 366 326 367 327 368 327 371 328 372 332 373 331 375 330 377 334 378 336 378 339 379 342 380 345 382 349 384 353 385 354 387 358 387 360 389 359 394 360 397Z","p":56},{"uf":"MG","n":"Minas Gerais","d":"M528 366 524 364 522 365 519 366 519 368 517 368 514 369 513 371 515 372 515 375 516 377 515 380 512 379 513 380 515 382 516 385 517 387 516 390 514 392 513 393 512 397 510 402 504 402 502 404 503 408 502 411 499 414 498 415 496 422 494 425 496 427 493 428 483 433 479 432 477 433 472 433 467 435 465 436 462 436 459 438 456 438 454 440 450 441 447 443 445 443 442 442 441 444 441 446 435 447 432 447 430 443 431 441 429 440 427 439 427 436 427 432 427 429 429 426 429 424 426 421 423 422 421 419 420 417 419 415 418 412 420 410 418 407 417 404 415 398 412 399 408 399 408 401 405 401 402 399 393 401 392 403 393 406 391 403 390 401 388 404 386 402 386 399 382 397 380 398 377 398 372 397 370 397 368 395 366 396 365 397 360 399 359 394 360 390 362 387 363 385 366 384 367 383 368 379 370 377 372 377 375 376 378 376 381 375 384 376 388 374 392 371 394 372 398 372 401 372 406 373 412 371 413 369 417 367 416 363 417 361 417 358 414 358 414 355 417 352 419 349 418 344 415 343 415 340 417 337 417 334 421 333 424 332 424 327 423 324 424 322 424 318 428 319 428 314 429 313 432 314 433 316 436 316 437 318 436 321 439 319 441 320 444 316 447 316 448 314 451 313 455 311 460 307 464 305 467 306 471 306 471 310 471 313 477 314 478 313 480 312 484 312 490 316 493 318 496 319 499 320 503 319 510 326 510 329 513 330 516 328 521 329 523 330 525 331 530 333 533 335 532 339 527 343 527 346 526 348 524 348 522 352 521 356 523 357 528 362 527 365Z","p":62},{"uf":"PA","n":"Pará","d":"M371 236 308 232 274 230 271 228 269 227 266 226 264 225 261 222 258 219 256 218 256 215 255 213 255 211 253 207 252 203 249 197 247 196 247 192 245 191 244 190 243 187 243 185 245 184 275 119 274 117 271 117 269 116 268 114 266 112 264 111 263 109 259 109 257 107 255 107 253 105 249 102 244 98 243 95 241 94 238 92 239 89 237 88 236 85 236 79 235 62 236 63 239 63 242 62 242 60 245 58 248 59 250 57 254 56 257 56 259 54 260 52 264 51 266 52 268 53 270 52 272 52 276 52 281 54 283 53 281 48 280 46 281 44 286 45 297 43 299 44 301 47 301 53 301 55 303 54 307 55 310 56 311 58 313 59 315 61 318 60 321 63 322 68 324 70 326 71 326 74 327 78 328 80 329 85 334 88 334 91 336 92 336 96 338 97 339 100 342 100 344 100 345 102 344 104 341 103 337 105 335 106 333 106 339 106 340 108 342 107 345 107 349 104 352 103 355 101 357 99 359 98 361 96 362 100 362 103 363 106 364 107 363 111 360 111 355 109 354 108 352 111 351 114 352 117 353 118 352 114 354 110 357 111 359 114 358 116 359 118 360 120 359 118 360 114 362 114 363 116 362 113 364 110 368 111 369 112 375 110 377 112 381 111 383 110 385 109 384 114 383 116 383 118 383 122 384 119 385 116 386 113 388 112 391 111 393 108 395 105 398 107 400 105 403 105 399 105 399 102 402 99 401 97 402 96 405 93 407 94 410 92 411 94 413 92 414 93 416 95 415 93 417 91 419 93 422 93 423 95 424 93 425 95 428 95 428 97 431 98 434 97 433 100 435 99 435 102 434 108 432 109 434 111 433 115 431 117 431 120 427 125 428 126 427 129 426 131 425 133 423 135 421 139 420 143 418 145 416 148 415 149 413 153 409 153 394 165 397 166 400 166 401 168 404 169 403 171 402 173 402 177 400 178 399 181 397 182 396 185 393 187 390 188 387 190 388 192 388 195 386 197 385 199 386 201 387 203 387 207 386 213 383 217 382 219 380 220 378 223 376 225 374 227 373 232 371 236ZM392 105 388 107 385 108 382 108 380 110 379 108 378 110 374 109 369 111 366 110 365 108 363 106 362 105 363 100 366 99 364 99 362 97 363 92 366 93 364 90 365 86 366 85 368 84 373 84 380 86 384 86 388 84 390 85 393 85 400 86 400 89 399 93 398 96 396 97 394 101 393 105ZM345 105 346 102 348 100 349 96 350 94 351 92 353 91 356 90 357 93 356 95 355 98 353 101 347 105ZM374 82 370 82 369 80 370 79 374 78 379 77 380 79 378 80 376 83 374 82ZM379 82 380 81 384 82 384 84 381 84 377 84 379 82ZM362 87 359 86 360 84 364 82 366 83 364 85 362 87ZM371 77 370 75 371 73 374 72 375 74 373 76 371 77ZM357 97 358 93 361 91 362 93 359 95 357 97ZM368 79 368 74 369 75 370 78 368 79ZM353 90 355 87 356 85 357 87 355 88 353 90ZM367 83 365 80 368 80 368 82ZM362 113 359 113 357 111 361 112ZM341 108 341 105 343 104 345 106 341 107ZM353 101 355 98 356 95 356 100 353 101ZM360 91 361 88 363 89 360 91ZM391 110 390 109 391 107 391 110ZM358 91 359 87 360 88 358 91ZM360 96 359 98 357 99 359 96ZM337 106 341 103 337 106ZM401 101 399 100 401 99 401 101ZM363 82 361 83 362 81ZM358 91 361 88 360 90ZM360 95 362 93 360 95ZM388 111 390 109 388 111ZM362 88 363 86 362 88ZM429 98 430 96 429 98Z","p":59},{"uf":"PB","n":"Paraíba","d":"M611 199 608 197 605 197 602 198 601 199 599 202 595 202 592 204 589 204 586 205 584 206 583 208 581 210 578 211 576 209 575 207 572 206 575 203 574 201 578 199 574 195 570 197 568 199 564 201 563 203 558 204 557 202 554 203 552 201 554 196 552 194 551 191 551 189 553 187 553 183 554 181 557 182 560 183 565 181 566 179 569 177 574 176 575 177 572 181 571 183 570 186 573 186 574 188 577 187 581 187 581 190 585 190 586 188 585 185 586 184 586 181 587 180 589 181 593 182 599 182 604 184 609 183 610 186 611 190 611 192 612 194 612 199Z","p":68},{"uf":"PR","n":"Paraná","d":"M397 500 392 500 390 500 387 500 386 502 383 504 380 503 377 501 372 501 370 501 368 500 365 501 364 503 362 504 358 504 356 505 355 508 356 511 354 511 352 510 347 511 344 510 342 509 337 507 331 506 329 506 326 506 324 505 322 504 318 505 315 499 315 497 314 494 311 491 308 492 305 494 304 493 303 490 305 488 306 485 305 483 306 479 308 476 307 474 309 472 308 470 308 467 311 465 313 456 316 455 318 450 319 447 326 444 329 442 333 442 337 442 340 442 342 441 345 442 347 442 350 443 352 443 355 443 358 445 361 446 362 447 366 447 372 448 375 447 376 449 380 452 381 453 381 456 381 459 382 461 382 463 383 466 385 468 386 471 386 475 386 477 390 478 393 477 397 477 399 479 397 483 398 484 400 481 403 481 403 486 405 488 403 491 404 488 402 488 399 488 399 491 396 490 398 492 400 492 398 496 394 498 397 498Z","p":53},{"uf":"PE","n":"Pernambuco","d":"M559 227 557 224 555 223 555 220 553 222 551 220 550 219 547 218 544 218 542 215 540 215 538 216 535 219 533 219 532 223 529 224 527 223 526 228 523 229 521 230 520 228 518 225 517 223 517 220 514 218 510 218 512 216 514 215 517 213 522 208 523 207 522 204 521 202 520 199 523 197 528 197 530 197 532 196 537 197 539 199 541 200 543 202 545 203 547 204 549 202 551 201 553 203 556 203 558 203 561 203 564 201 567 200 569 198 572 196 577 197 575 200 575 203 573 206 576 206 576 209 578 211 581 210 583 208 584 206 586 205 589 204 592 204 595 203 599 202 600 201 602 198 605 197 607 197 611 199 612 201 611 203 612 204 610 212 607 221 604 220 602 220 598 221 595 220 592 222 589 224 588 226 585 227 580 226 578 227 574 225 572 223 570 221 567 221 563 225 561 225Z","p":69},{"uf":"PI","n":"Piauí","d":"M506 127 510 128 512 129 510 132 509 134 509 136 511 141 514 148 516 151 515 153 516 157 516 160 517 163 515 166 517 175 518 178 519 183 520 186 524 187 525 189 523 191 522 194 523 197 520 198 521 200 522 204 523 207 522 208 518 212 515 214 512 216 510 218 508 221 504 222 504 224 502 226 499 226 497 227 495 227 493 229 491 230 486 231 484 228 481 229 479 229 476 227 471 229 473 235 473 238 472 240 469 245 466 247 464 247 460 248 458 250 456 252 452 252 448 250 446 248 446 246 443 243 438 243 439 240 440 238 440 231 441 229 439 226 438 223 438 221 438 219 440 218 441 215 442 213 444 210 444 208 445 205 446 202 448 200 450 199 453 199 456 197 458 196 461 194 463 193 465 191 468 187 471 187 473 186 477 188 480 187 484 187 485 186 486 183 487 181 485 178 483 176 483 174 483 169 487 165 487 162 486 159 485 156 486 153 486 151 484 148 486 147 487 145 488 143 489 141 492 136 496 135 500 132 502 129 502 126 503 125 505 127Z","p":64},{"uf":"RJ","n":"Rio de Janeiro","d":"M469 451 472 450 475 449 472 448 468 448 467 449 464 447 461 449 458 450 458 453 461 454 459 455 455 453 456 449 460 447 463 447 466 444 464 442 460 443 457 441 456 439 459 438 462 436 464 436 466 436 472 433 476 433 479 432 482 432 493 428 496 427 494 426 496 422 498 415 499 414 502 412 504 412 505 417 507 418 511 419 514 419 516 420 515 423 516 432 512 434 506 436 504 438 500 442 500 444 499 447 491 448 485 449 483 448 483 446 484 443 480 444 482 447 480 449 470 450ZM464 453 465 450 467 451 465 452Z","p":41},{"uf":"RN","n":"Rio Grande do Norte","d":"M610 183 605 183 602 183 594 183 590 182 589 180 586 181 586 184 585 185 586 188 585 190 582 191 582 188 579 187 574 188 573 186 570 186 571 184 572 181 575 177 574 176 571 177 566 178 565 181 561 182 557 183 555 181 553 181 554 177 557 177 558 175 560 174 561 172 562 169 563 167 567 161 569 159 574 157 575 159 579 159 581 161 586 161 589 161 591 161 594 161 598 161 602 162 603 164 606 169 606 171 607 177 608 179 609 182Z","p":67},{"uf":"RS","n":"Rio Grande do Sul","d":"M322 639 320 638 320 633 320 629 321 626 323 624 327 620 325 618 322 617 319 615 318 613 318 610 316 608 314 606 311 604 308 603 307 601 305 599 303 597 300 596 297 594 293 593 291 589 290 588 288 586 286 587 284 590 281 590 281 587 278 580 275 579 273 577 271 574 269 572 265 572 263 574 262 576 257 575 256 574 258 573 261 570 261 567 263 566 265 565 270 559 271 556 273 554 277 550 279 548 280 546 282 543 283 541 285 541 285 539 287 537 290 536 291 534 294 532 297 532 298 530 300 527 304 526 307 525 310 522 312 521 315 520 319 521 322 520 327 520 328 521 331 521 333 522 335 522 340 522 342 523 344 524 345 526 349 526 354 529 356 531 358 532 361 535 363 537 365 542 373 543 375 543 379 543 380 545 378 547 376 549 375 553 374 555 372 556 374 559 376 556 378 557 378 560 374 567 370 579 364 589 358 596 352 602 346 605 343 610 343 606 342 604 345 604 348 603 352 598 354 598 356 596 357 593 357 590 359 590 360 587 363 585 364 581 365 578 367 575 365 574 365 575 361 576 360 578 359 576 357 575 356 572 354 573 355 575 356 578 355 581 355 584 354 582 353 584 352 587 352 589 350 591 345 594 344 596 343 601 340 602 341 605 340 608 342 609 340 611 338 616 336 623 334 627 332 630 324 637Z","p":47},{"uf":"RO","n":"Rondônia","d":"M188 291 186 290 184 287 182 288 178 286 174 284 171 281 170 280 168 281 166 280 162 277 158 277 156 278 154 277 151 277 149 275 147 273 145 272 144 270 141 270 140 266 138 265 137 262 135 258 136 254 135 250 134 248 135 245 136 243 136 240 136 237 135 233 133 234 131 235 129 234 124 234 118 236 115 237 112 235 115 233 117 232 119 230 123 229 126 229 129 231 131 230 132 229 135 227 137 226 138 229 142 226 142 223 144 222 147 223 151 221 155 222 154 218 156 217 158 215 157 213 158 212 160 211 162 209 164 207 174 207 176 208 178 210 179 211 182 212 183 216 186 219 189 220 190 218 192 217 194 219 196 221 194 227 195 229 196 232 195 234 194 239 194 242 196 245 195 254 212 254 213 255 217 255 219 256 220 260 219 262 217 264 218 268 221 271 221 275 221 279 219 281 218 283 216 285 213 290 213 292 209 295 207 296 204 295 203 293 196 294 191 294 190 293Z","p":50},{"uf":"RR","n":"Roraima","d":"M235 62 236 79 218 79 216 83 214 86 213 89 214 92 212 94 210 95 207 95 206 93 204 91 201 90 199 91 197 91 195 93 194 96 194 100 194 102 194 104 192 103 189 102 187 100 185 99 180 94 182 93 183 91 182 87 180 85 179 83 179 78 180 74 179 71 181 70 180 66 178 61 175 57 177 52 174 51 171 51 170 48 168 49 166 48 167 45 163 44 159 45 156 44 156 41 156 38 154 35 153 33 153 29 153 26 152 24 149 23 147 21 146 19 144 17 146 16 147 18 151 18 154 18 156 21 158 21 162 21 164 22 165 21 168 22 172 26 175 26 176 24 175 21 176 19 179 18 181 17 185 19 188 17 191 16 195 16 195 14 198 12 201 12 203 12 204 10 206 9 208 8 210 5 209 2 214 1 216 0 218 2 219 4 218 9 216 11 218 12 222 13 224 14 223 17 225 20 224 25 222 26 222 30 220 32 219 35 219 38 219 40 220 42 221 45 222 46 223 53 225 54 227 56 228 58 231 61Z","p":36},{"uf":"SC","n":"Santa Catarina","d":"M380 558 377 557 374 557 372 558 374 555 375 553 376 549 376 547 380 545 379 543 375 543 373 543 367 542 363 539 361 535 358 532 357 531 354 529 349 526 347 527 344 524 342 523 340 522 337 522 333 522 331 521 328 521 327 520 324 520 322 519 319 521 315 520 316 517 317 515 317 512 317 509 317 506 318 505 322 505 324 505 326 506 329 506 331 506 337 507 341 508 344 510 347 510 352 510 353 512 355 511 355 507 356 505 358 504 362 504 364 503 365 501 368 500 370 501 372 501 375 500 380 503 383 504 386 502 387 500 390 500 392 500 397 500 397 503 396 504 394 501 394 505 396 507 396 510 395 513 397 519 398 520 396 521 396 525 397 528 396 531 397 532 396 535 396 539 394 543 393 540 393 543 393 546 387 549 384 552 381 556 380 558ZM397 532 398 527 399 524 400 528 398 530 397 532ZM397 507 395 505 398 503 397 507Z","p":60},{"uf":"SP","n":"São Paulo","d":"M405 488 403 486 403 483 401 480 399 483 397 483 398 480 397 477 394 477 390 478 388 478 386 475 387 473 385 469 384 467 382 463 382 461 381 459 380 457 381 453 380 452 376 449 375 447 372 448 367 448 365 447 362 446 358 445 356 444 353 443 350 443 347 442 345 442 342 441 340 442 337 442 333 442 329 442 326 444 327 441 336 436 338 434 339 431 341 430 343 427 345 423 346 421 346 418 350 413 350 410 351 408 354 405 356 404 359 403 359 400 363 398 366 396 368 395 370 397 372 397 377 398 380 398 382 397 384 399 386 400 387 404 389 403 391 405 392 403 393 401 401 401 404 401 408 401 408 399 412 399 415 398 418 402 417 406 420 408 418 412 419 415 420 418 421 419 422 421 424 422 429 423 429 427 427 429 427 432 427 436 427 439 429 440 431 441 430 443 432 447 435 447 439 446 442 445 442 442 445 443 447 443 450 441 452 440 456 439 457 441 459 442 464 442 466 444 464 446 460 447 457 448 455 452 457 454 453 456 449 459 447 459 447 462 443 462 440 462 438 462 436 463 434 466 433 464 431 465 423 470 422 472 418 475 415 477 409 481 406 483 408 485 406 487 405 488ZM449 465 446 465 448 461 450 465Z","p":55},{"uf":"SE","n":"Sergipe","d":"M570 262 567 263 565 262 563 260 563 257 561 256 559 253 558 252 559 249 562 250 565 249 565 245 566 243 566 239 563 236 562 234 562 231 569 234 572 234 578 238 579 240 581 241 583 242 587 245 585 247 580 250 578 253 576 250 577 253 575 255 574 254 575 255 574 258 573 260 573 257 572 259 572 261Z","p":62},{"uf":"TO","n":"Tocantins","d":"M434 282 428 284 427 285 424 286 418 287 415 289 414 290 412 287 411 290 407 290 403 288 404 286 399 286 396 286 395 288 393 285 392 282 391 280 389 279 387 282 385 288 381 286 378 285 374 284 372 283 369 283 370 281 371 279 369 279 368 283 365 279 365 276 365 273 364 271 365 268 364 266 365 263 363 262 365 255 365 252 366 249 368 244 369 240 371 237 373 232 374 227 375 226 378 223 379 221 381 220 383 218 385 213 387 207 388 203 386 201 385 199 386 197 388 195 388 192 387 190 390 188 393 187 396 186 397 182 398 181 400 179 401 177 403 174 402 171 404 171 403 168 400 166 397 166 395 165 398 163 401 162 404 164 406 163 408 164 410 166 413 167 415 172 415 177 416 179 414 186 414 188 414 191 412 193 410 194 412 195 414 197 415 199 418 203 422 207 424 206 428 205 430 206 429 211 426 213 424 214 423 218 421 222 423 223 424 226 425 228 429 230 427 233 430 236 431 239 432 241 434 241 436 241 438 243 441 243 440 245 436 247 433 250 434 252 431 253 430 257 428 259 431 262 434 262 436 263 433 265 434 267 436 268 434 269 432 271 432 275 433 277 435 278 434 281Z","p":58}]};
 /* illustrative data (stable per load) */
 const MAP=['...XXXX...','..XXXXXXX.','.XXXXXXXXX','XXXXXXXXXX','.XXXXXXXX.','..XXXXXX..','...XXXX...','....XX....'];
 const TILES=MAP.join('').split('').map(ch=>{if(ch!=='X')return{cls:'off',st:null};const r=Math.random();
@@ -763,15 +818,21 @@ const HeroNet={template:'<canvas ref="c" class="net" aria-hidden="true"></canvas
     return{c}}};
 
 const PipelineTerm={template:'#t-term',setup(){
-  const L=[['c','$ run integracao --origem erp --destino bi'],['','→ autenticando na API do ERP (OAuth2)…'],['','→ 4 arquivos recebidos via SFTP'],['','→ staging: 1.284.390 linhas em 12 partições'],['','→ validando tipos, chaves e duplicidades'],['w','! 37 registros com loja inválida → quarentena'],['','→ BulkMerge em vendas e estoque'],['ok','✓ estoque loja a loja atualizado'],['ok','✓ alocação e OTB recalculados'],['ok','✓ dashboards atualizados'],['','→ laudo da quarentena anexado ao chamado']];
+  const L=[['c','$ run integracao --origem erp --destino bi'],['','→ autenticando na API do ERP (OAuth2)…'],['','→ 4 arquivos recebidos via SFTP'],['','→ staging: 1.284.390 linhas em 12 partições'],['','→ validando tipos, chaves e duplicidades'],['w','! 37 registros com loja inválida → quarentena'],['','→ BulkMerge em vendas e estoque'],['ok','✓ estoque loja a loja atualizado'],['ok','✓ alocação e OTB recalculados'],['ok','✓ Power BI, dashboards web e relatórios atualizados'],['','→ laudo da quarentena anexado ao chamado']];
   const n=ref(reduce?L.length:0);let t;
   const tick=()=>{if(n.value<L.length){n.value++;t=setTimeout(tick,n.value===1?700:480)}else t=setTimeout(()=>{n.value=0;tick()},4500)};
   onMounted(()=>{if(!reduce)t=setTimeout(tick,600)});onBeforeUnmount(()=>clearTimeout(t));
   return{shown:computed(()=>L.slice(0,n.value)),done:computed(()=>n.value===L.length)}}};
 
-const ScrSentiment={template:'#t-sent',setup:()=>({tiles:TILES,
-  segs:[{c:'var(--accent)',v:62,o:0},{c:'var(--muted)',v:23,o:-62},{c:'var(--signal)',v:15,o:-85}],
-  topics:[{n:'#mobilidade',w:86,up:1,v:'18%'},{n:'#saúde',w:64,up:0,v:'7%'},{n:'#segurança',w:52,up:1,v:'4%'},{n:'#educação',w:38,up:1,v:'2%'}]})};
+const ScrSentiment={template:'#t-sent',setup(){
+  const states=BR_MAP.s.map(s=>{const p=s.p;const cls=p>=53?'':p>=45?'neu':'neg';
+    const o=cls===''?(.38+(p-53)/26).toFixed(2):cls==='neu'?.45:(.5+(45-p)/20).toFixed(2);return{...s,cls,o}});
+  const order=['BA','SP','PE','RJ','MG','AM','RS','CE','DF','PA'].map(u=>states.find(s=>s.uf===u));
+  const k=ref(0);let t;
+  onMounted(()=>{if(!reduce)t=setInterval(()=>{k.value=(k.value+1)%order.length},2200)});onBeforeUnmount(()=>clearInterval(t));
+  return{vb:BR_MAP.vb,states,hi:computed(()=>order[k.value]),
+    segs:[{c:'var(--accent)',v:62,o:0},{c:'var(--muted)',v:23,o:-62},{c:'var(--signal)',v:15,o:-85}],
+    topics:[{n:'#mobilidade',w:86,up:1,v:'18%'},{n:'#saúde',w:64,up:0,v:'7%'},{n:'#segurança',w:52,up:1,v:'4%'}]}}};
 
 const ScrVoice={template:'#t-voice',setup(){
   const lines=[{av:'EU',who:'Você',l:'PT → EN',src:'Podemos revisar o cronograma da entrega?',dst:'Can we review the delivery schedule?'},
